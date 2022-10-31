@@ -20,6 +20,7 @@ public class ColicionBala : MonoBehaviour
         if (other.gameObject.CompareTag("Enemigo"))
         {
             Destroy(gameObject);
+            Destroy(other.gameObject);
         }
 
     }
