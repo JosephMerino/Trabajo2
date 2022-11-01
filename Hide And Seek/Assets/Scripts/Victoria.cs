@@ -8,19 +8,21 @@ public class Victoria : MonoBehaviour
     public PlayerControler movimiento;
     public CamaraMove camara;
     public Timer pausaTiempo;
+    public Pausa pausaJuego;
 
     // Update is called once per frame
     void Update()
     {
         if (Juego.victoria == true)
         {
-            Cursor.lockState = CursorLockMode.None;
-
             enemigos.SetActive(false);
             movimiento.enabled = false;
             camara.enabled = false;
+            pausaJuego.enabled = false;
             pVictoria.SetActive(true);
             pausaTiempo.enabled = false;
+
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {

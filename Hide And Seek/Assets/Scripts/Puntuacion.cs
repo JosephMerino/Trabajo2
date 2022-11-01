@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Puntuacion : MonoBehaviour
 {
     public Text tiempoPuntuacion;
+    public TMP_Text NombrePuntuacion;
+    public int dificultad;
 
     public 
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class Puntuacion : MonoBehaviour
     void Update()
     {
         tiempoPuntuacion.text = "Completado en " + PlayerPrefs.GetFloat("tResto").ToString("f0") + " segundos";
-        //Debug.Log(tiempoCompletado);
+        NombrePuntuacion.text = "¡¡BIEN HECHO " + PlayerPrefs.GetString("Nombre") + " !!";
+
     }
 }
