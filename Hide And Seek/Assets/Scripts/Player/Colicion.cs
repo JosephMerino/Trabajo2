@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Colicion : MonoBehaviour
 {
-    public static int vidas;
+    public static float vidas;
     private bool timeOut;
+    public Text cVidas;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeOut = true;        
+        timeOut = true;
+        cVidas.text = "Vidas : " + vidas.ToString("f0");
+    }
+    private void FixedUpdate()
+    {
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,14 +30,14 @@ public class Colicion : MonoBehaviour
             {
                 //Debug.Log("Golpe contra el player  " + vidas);
                 vidas = vidas - 1;
-
-                if (vidas == 0)
+                cVidas.text = "Vidas : " + vidas.ToString("f0");
+                
+                if (vidas <= 0)
                 {
-                    Debug.Log("GameOver");
-                    //Muenu para reiniciar
+                    //Debug.Log("GameOver Colisiones");
+                    Juego.gameOver = true;
                 }
             }
-
             StartCoroutine(descVidas());
         }
         else {
@@ -40,7 +47,7 @@ public class Colicion : MonoBehaviour
 
     IEnumerator descVidas() 
     {        
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         timeOut = true;
     }

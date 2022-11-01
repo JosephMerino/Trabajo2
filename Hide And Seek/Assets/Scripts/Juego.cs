@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class Juego : MonoBehaviour
 {
-    public int dificultad;
+    public int vidas;
+    public static bool gameOver , victoria ,pausa;
 
     private void Awake()
     {
-        if (dificultad == 1)
-        {
-            Colicion.vidas = 5;
-        }
-        else if (dificultad == 2)
-        {
-            Colicion.vidas = 3;
-        }
-        else if (dificultad == 3)
-        {
-            Colicion.vidas = 1;
-        }
+        gameOver = false;
+        victoria = false;
+        pausa = false;
+
+        Colicion.vidas = vidas;
     }
 
     // Start is called before the first frame update
@@ -31,6 +25,10 @@ public class Juego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public void Despausar()
+    {
+        pausa = false;
     }
 }

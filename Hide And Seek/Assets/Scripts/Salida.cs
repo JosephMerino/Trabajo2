@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Salida : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
-            Debug.Log("Exito pasaste el nivel");
+            Juego.victoria = true;
 
             //Muenu de puntuaciones
         }

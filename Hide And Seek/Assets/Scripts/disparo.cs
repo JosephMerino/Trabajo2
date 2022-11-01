@@ -20,5 +20,10 @@ public class disparo : MonoBehaviour
             instanciaProyectil.AddForce(cañon.forward * 2500);
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Juego.pausa = true;
+        }
+
     }
 }
