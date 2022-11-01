@@ -8,19 +8,21 @@ public class GameOver : MonoBehaviour
     public PlayerControler movimiento;
     public CamaraMove camara;
     public Timer pausaTiempo;
+    public Pausa pausaJuego;
 
     // Update is called once per frame
     void Update()
     {
         if (Juego.gameOver == true)
         {
-            Cursor.lockState = CursorLockMode.None;
-
             enemigos.SetActive(false);
             movimiento.enabled = false;
             camara.enabled = false;
+            pausaJuego.enabled = false;
             pGameOver.SetActive(true);
             pausaTiempo.enabled = false;
+
+            Cursor.lockState = CursorLockMode.None;
         }
         else if(Juego.gameOver == false)
         {
