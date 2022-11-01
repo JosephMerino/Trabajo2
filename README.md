@@ -1,2 +1,10 @@
 # Trabajo2
-Proyecto en Unity correspondiente a la evaluación 2 de el ramo de Desarrollo de videojuegos 
+Desarrollo de la Evaluacion 2 por Joseph Merino, Fernando Campos y Alfonso Gallardo
+
+Instrucciones de Movmiento;
+
+W o Flecha hacia arriba: Adelante
+A o Flecha hacia a la izquierda: Izquierda
+S o Flecha hacia abajo: Atras
+D o Flecha hacia la derecha: Derecha
+Barra Espaciadora: Disparar
