@@ -11,4 +11,6 @@ S o Flecha hacia abajo: Atras;
 
 D o Flecha hacia la derecha: Derecha;
 
-Barra Espaciadora: Disparar;
+Click derecho: Disparar;
+
+Movimiento : Mouse; 
