@@ -13,4 +13,4 @@ D o Flecha hacia la derecha: Derecha;
 
 Click Izquierdo: Disparar;
 
-Movimiento : Mouse; 
+Movimiento Camara : Mouse; 
