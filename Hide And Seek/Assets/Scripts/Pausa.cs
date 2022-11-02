@@ -8,6 +8,7 @@ public class Pausa : MonoBehaviour
     public PlayerControler movimiento;
     public CamaraMove camara;
     public Timer pausaTiempo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +22,19 @@ public class Pausa : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
 
-            pJuego.SetActive(false);
-            disparo.SetActive(false);
-            enemigos.SetActive(false);
             movimiento.enabled = false;
             camara.enabled = false;
             pausaTiempo.enabled = false;
             pPausa.SetActive(true);
+            pJuego.SetActive(false);
+            disparo.SetActive(false);
+            enemigos.SetActive(false);
         }
+
         else if (Juego.pausa == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+
             pJuego.SetActive(true);
             disparo.SetActive(true);
             enemigos.SetActive(true);

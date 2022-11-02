@@ -6,9 +6,11 @@ public class disparo : MonoBehaviour
 {
     public Rigidbody proyectil;
     public Transform cañon;
+    private AudioSource SonidoBala;
+
     void Start()
     {
-        
+        SonidoBala = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -18,6 +20,7 @@ public class disparo : MonoBehaviour
             Rigidbody instanciaProyectil;
             instanciaProyectil = Instantiate(proyectil, cañon.position, cañon.rotation) as Rigidbody;
             instanciaProyectil.AddForce(cañon.forward * 2500);
+            SonidoBala.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

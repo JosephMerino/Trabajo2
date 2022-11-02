@@ -10,17 +10,22 @@ public class Victoria : MonoBehaviour
     public Timer pausaTiempo;
     public Pausa pausaJuego;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
         if (Juego.victoria == true)
         {
-            enemigos.SetActive(false);
             movimiento.enabled = false;
             camara.enabled = false;
             pausaJuego.enabled = false;
-            pVictoria.SetActive(true);
             pausaTiempo.enabled = false;
+            pVictoria.SetActive(true);
+            enemigos.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
         }
